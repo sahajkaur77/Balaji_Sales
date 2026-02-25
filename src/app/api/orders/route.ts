@@ -4,9 +4,9 @@ import path from 'path';
 import { Resend } from 'resend';
 
 const DB_PATH = path.join(process.cwd(), 'src', 'db.json');
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
+    const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
     try {
         const body = await request.json();
         const { name, phone, productName, quantity, message } = body;
@@ -38,7 +38,8 @@ export async function POST(request: Request) {
 
         // Send Email Notification to Manager (Non-blocking)
         try {
-            if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 're_123456789') {
+            const apiKey = process.env.RESEND_API_KEY;
+            if (apiKey && apiKey !== 're_123456789' && resend) {
                 await resend.emails.send({
                     from: 'Balaji Sales <onboarding@resend.dev>',
                     to: process.env.MANAGER_EMAIL || 'himanshumathani77@gmail.com',
