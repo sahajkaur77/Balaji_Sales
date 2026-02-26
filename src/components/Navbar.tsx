@@ -41,6 +41,7 @@ export default function Navbar() {
             <Link href="/#home" className={`text-sm font-bold transition-all hover:text-primary ${isScrolled ? 'text-secondary' : 'text-white/80'}`}>Home</Link>
             <Link href="/#products" className={`text-sm font-bold transition-all hover:text-primary ${isScrolled ? 'text-secondary' : 'text-white/80'}`}>Products</Link>
             <Link href="/#about" className={`text-sm font-bold transition-all hover:text-primary ${isScrolled ? 'text-secondary' : 'text-white/80'}`}>About</Link>
+            <Link href="/catalogue" className={`text-sm font-bold transition-all hover:text-primary ${isScrolled ? 'text-secondary' : 'text-white/80'}`}>Catalogue</Link>
             <Link
               href="#contact"
               className="bg-primary text-white px-8 py-2.5 rounded-xl text-sm font-bold hover:bg-secondary transition-all hover:scale-105 shadow-lg shadow-primary/20"
@@ -78,6 +79,7 @@ export default function Navbar() {
           <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="text-3xl font-black text-white hover:text-primary transition-colors italic">Home</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} href="/#products" className="text-3xl font-black text-white hover:text-primary transition-colors italic">Products</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} href="/#about" className="text-3xl font-black text-white hover:text-primary transition-colors italic">About Us</Link>
+          <Link onClick={() => setIsMobileMenuOpen(false)} href="/catalogue" className="text-3xl font-black text-white hover:text-primary transition-colors italic">Catalogue</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} href="#contact" className="bg-primary text-white px-12 py-5 rounded-3xl text-xl font-bold mt-4 shadow-2xl shadow-primary/30">Order Now</Link>
         </div>
       </div>

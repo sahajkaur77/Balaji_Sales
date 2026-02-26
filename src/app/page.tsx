@@ -13,42 +13,36 @@ const PRODUCTS = [
     id: "1",
     name: "Stainless Steel Pipes",
     description: "High-grade SS pipes available in various diameters and thicknesses. Ideal for industrial and architectural use.",
-    image: "/pipe.jpg",
     category: "Industrial",
   },
   {
     id: "2",
     name: "S.S. Sheets",
     description: "Premium stainless steel sheets with different finishes including matte, mirror, and brushed.",
-    image: "/sheet.jpg",
     category: "Raw Material",
   },
   {
     id: "3",
     name: "Steel Railing Accessories",
     description: "Complete range of railing fittings including base plates, end caps, and wall brackets.",
-    image: "/railing.jpg",
     category: "Accessories",
   },
   {
     id: "4",
     name: "S.S. Rods & Flats",
     description: "Precision-engineered rods and flat bars for structural and decorative applications.",
-    image: "/rods.jpg",
     category: "Construction",
   },
   {
     id: "5",
     name: "Folding Fittings",
     description: "Modern folding and moulding fittings for versatile furniture and enclosure designs.",
-    image: "/fitting.jpg",
     category: "Hardware",
   },
   {
     id: "6",
     name: "Aluminium Ladders",
     description: "Lightweight and durable aluminium ladders for commercial and domestic use.",
-    image: "/ladder.jpg",
     category: "Utility",
   }
 ];

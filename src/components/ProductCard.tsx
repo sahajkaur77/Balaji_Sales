@@ -6,7 +6,7 @@ interface ProductProps {
     id: string;
     name: string;
     description: string;
-    image: string;
+    image?: string;
     category: string;
     onOrder: (productName: string) => void;
 }
@@ -14,27 +14,16 @@ interface ProductProps {
 export default function ProductCard({
     name,
     description,
-    image,
     category,
     onOrder,
 }: ProductProps) {
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover group h-full flex flex-col">
-            <div className="relative h-56 w-full overflow-hidden">
-                <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-primary/90 backdrop-blur-md text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full shadow-sm">
-                        {category}
-                    </span>
-                </div>
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center relative">
-                    {/* Placeholder for real images */}
-                    <div className="text-gray-300 transform group-hover:scale-110 transition-transform duration-500">
-                        {/* Using a Div instead of Image for now since I don't have real assets yet */}
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-20 h-20">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
-                        </svg>
-                    </div>
-                </div>
+            {/* Image section removed as requested */}
+            <div className="pt-6 px-6">
+                <span className="bg-primary/90 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full shadow-sm inline-block">
+                    {category}
+                </span>
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
