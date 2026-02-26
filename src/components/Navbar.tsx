@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +23,9 @@ export default function Navbar() {
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
-              S
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="group-hover:scale-110 transition-transform duration-300">
+              <Logo className="w-12 h-12" />
             </div>
             <div className="flex flex-col">
               <span className={`text-xl font-black tracking-tight leading-none transition-colors ${isScrolled ? 'text-secondary' : 'text-white'}`}>

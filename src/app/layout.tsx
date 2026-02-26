@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Balaji Sales | Premium Stainless Steel Accessories",
   description: "Complete Stainless Steel solutions for railings, furniture, and industrial needs. Quality SS Pipes, Sheets, Rods, and Fittings in Raipur, Chhattisgarh.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

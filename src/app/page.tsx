@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import OrderModal from "@/components/OrderModal";
 import FloatingCall from "@/components/FloatingCall";
+import Logo from "@/components/Logo";
 
 const PRODUCTS = [
   {
@@ -100,8 +101,8 @@ export default function Home() {
                 <div className="w-full h-full flex items-center justify-center p-8 lg:p-12">
                   <div className="w-full aspect-square border-2 border-white/10 rounded-full flex items-center justify-center animate-[pulse_4s_infinite]">
                     <div className="w-[80%] aspect-square border-2 border-primary/20 rounded-full flex items-center justify-center">
-                      <div className="w-[60%] aspect-square bg-primary flex items-center justify-center rounded-[2rem] lg:rounded-[3rem] transform rotate-12 shadow-2xl">
-                        <span className="text-7xl lg:text-9xl font-black text-white -rotate-12">S</span>
+                      <div className="w-[60%] aspect-square flex items-center justify-center rounded-[2rem] lg:rounded-[3rem] transform rotate-12 shadow-2xl overflow-hidden">
+                        <Logo className="w-full h-full -rotate-12" />
                       </div>
                     </div>
                   </div>
